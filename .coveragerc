@@ -1,0 +1,4 @@
+[run]
+omit =
+  noxfile.py
+  test_bien.py
