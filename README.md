@@ -94,3 +94,9 @@ def root():
 def time():
     return fastapi.responses.HTMLResponse(content=view_server_time().render())
 ```
+
+### Custom elements
+
+If you need custom elements with special logic for initialization or rendering,
+you can derive a component from `bien.Element` class. The only requirement is
+to implement `render(self) -> str` method.
