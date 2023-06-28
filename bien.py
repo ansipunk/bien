@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from html import escape
 from typing import Iterable, Mapping, Optional
@@ -85,3 +85,8 @@ class Text(Element):
             return self.content
 
         return escape(self.content)
+
+
+class HTML5Doctype(Element):
+    def render(self) -> str:
+        return "<!DOCTYPE html>"
